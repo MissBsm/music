@@ -1,0 +1,238 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-size: 16px;
+}
+.musicbox{
+    width: 100%;
+    position: relative;
+}
+.musicList{
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    background-image: url("../img/timg.jpg");
+    background-size: cover;
+    overflow-x: hidden; 
+    overflow: auto;
+}
+
+.musicList>div{
+    position: relative;
+    z-index: 5;
+}
+.localMusic{
+    text-align: center;
+    height: .5rem;
+    position: fixed !important;
+    top: 0;
+    box-sizing: border-box;
+    left: 0;
+    width: 100%;
+    line-height: .5rem;
+    font-size: 24px;
+    color: rgb(216, 219, 221);
+    border-bottom: 1px solid rgb(199, 198, 198);
+}
+.listBox{
+    margin-top: 0.5rem;
+    width: 100%;
+    height: calc(100% - 1.3rem);
+    overflow-x: hidden;
+    
+}
+.musicnav{
+    width: calc(100% - 40px);
+    overflow: auto;
+    margin: 0 20px;
+    list-style: none
+}
+.list{
+    width: calc(100% - 2px);
+    /* height: .7rem; */
+    overflow: hidden;
+    
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 5px;
+    /* box-sizing: border-box; */
+    margin: 10px 0;
+    position: relative;
+    background-color: rgba(255,255,255,.2);
+}
+.auto-img{
+    display: block;
+    width: 100%;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.paly{
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    top: 0.09rem;
+    left: .2rem;
+}
+.musicname{
+    font-size: 20px;
+    width: calc(100% - 150px);
+    margin-left: 70px;
+    overflow: hidden;
+    white-space:nowrap; 
+    text-overflow:ellipsis;
+    display:block;
+    color: rgb(255, 255, 255);
+}
+.singer{
+    font-size: 16px;
+    width: calc(100% - 150px);
+    margin-left: 70px;
+    overflow: hidden;
+    white-space:nowrap; 
+    text-overflow:ellipsis;
+    display:block;
+    color: rgb(199, 233, 213);
+}
+.durTime{
+    width: .5rem;
+    position: absolute;
+    right: 0.2rem;
+    top: 0.13rem;
+    color: rgb(228, 224, 224);
+}
+.shadow{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.281);
+}
+.crPlay{
+    position: absolute;
+    width: 100%;
+    height: .8rem;
+    z-index: 5;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    left: 0;
+}
+.progress{
+    width: 100%;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    height: 0.05rem;
+    z-index: 10;
+    background-color: rgb(153, 194, 204);
+}
+.progress-active{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30px;
+    background-image: linear-gradient(to right, rgb(214, 170, 170) 0%, rgb(243, 110, 110) 100%);
+    
+}
+.mask{
+    position: absolute;
+    left: 30px;
+    top: -0.025rem;
+    height: 0.1rem;
+    box-shadow:  0px 0px 10px 0px #fff;
+    width: 0.1rem;
+    border-radius: 50%;
+    background-color: rgb(188, 218, 216);
+    animation: breath 1.5s linear 0s infinite alternate;
+}
+@keyframes breath{
+    0%{
+        box-shadow: 0px 0px 10px 0px #fff;
+    }
+    100%{
+        box-shadow: 0px 0px 10px 6px #fff;
+    }
+}
+.layer{
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    top: -3px;
+}
+.mainbox{
+    overflow: hidden;
+    width: 100%;
+    height: 0.7rem;
+    position: absolute;
+    top: 8px;
+    margin: auto 0;
+}
+.author-img{
+    width: .7rem;
+    height: .7rem;
+    border: 2px solid rgb(155, 153, 153);
+    border-radius: 50%;
+    margin: 0 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+    
+.author-img>img{
+    animation: rolate 5s linear 0s infinite;
+}
+
+
+@keyframes rolate{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+    /* 100%{
+        transform: rotateZ(0deg);
+    } */
+}
+.music-text{
+    width: calc(100% - 1.9rem - 20px);
+    height: 50px;
+    margin-top: 0.05rem;
+    color: rgb(79, 99, 167);
+}
+.title{
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+}
+.name{
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: rgb(123, 144, 216);
+}
+.icon{
+    width: 1.2rem;
+    height: 40px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+.icon>span{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
+.crmusic{
+    width: 100%;
+    height: 100vh;
+    display: none;
+    background-image: url('../img/hahah.jpg');
+    background-size: cover;
+}
